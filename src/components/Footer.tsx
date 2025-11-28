@@ -48,15 +48,6 @@ const Footer = () => {
 
           {/* Social & Hours */}
           <div>
-            <h3 className="font-bold mb-4 text-lg">Мы в соцсетях</h3>
-            <div className="flex gap-4 mb-4">
-              <a href="#" className="text-background/80 hover:text-primary transition-colors">
-                <Instagram className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-background/80 hover:text-primary transition-colors">
-                <Facebook className="h-6 w-6" />
-              </a>
-            </div>
             <p className="text-background/80 text-sm">
               Работаем ежедневно<br />
               с 8:00 до 23:00
