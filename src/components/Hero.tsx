@@ -5,17 +5,18 @@ import heroImage from "@/assets/hero-groceries.jpg";
 const Hero = () => {
   return (
     <section className="relative w-full overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-hero opacity-95" />
+      <div className="absolute inset-0 bg-gradient-hero opacity-95 animate-fade-in" />
       <div className="absolute inset-0">
         <img 
           src={heroImage} 
-          alt="Fresh groceries" 
-          className="w-full h-full object-cover mix-blend-overlay opacity-40"
+          alt="Свежие продукты и овощи - доставка на дом" 
+          className="w-full h-full object-cover mix-blend-overlay opacity-40 animate-scale-in"
+          loading="eager"
         />
       </div>
       
       <div className="container relative mx-auto px-4 py-24 md:py-32">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl space-y-6">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in">
             Быстрая доставка<br />продуктов на дом
           </h1>
@@ -24,7 +25,7 @@ const Hero = () => {
           </p>
           <Button 
             size="lg" 
-            className="bg-secondary hover:bg-secondary/90 text-white text-lg px-8 py-6 h-auto animate-fade-in group"
+            className="bg-secondary hover:bg-secondary/90 text-white text-lg px-8 py-6 h-auto animate-fade-in hover-scale group"
             style={{ animationDelay: "0.2s" }}
           >
             Заказать сейчас

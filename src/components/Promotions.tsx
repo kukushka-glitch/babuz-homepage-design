@@ -26,7 +26,7 @@ const Promotions = () => {
   return (
     <section id="offers" className="py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 text-foreground">
+        <h2 className="text-4xl font-bold text-center mb-12 text-foreground animate-fade-in">
           Акции и предложения
         </h2>
         
@@ -36,21 +36,21 @@ const Promotions = () => {
             const bgColor = promo.color === "primary" ? "bg-primary" : "bg-secondary";
             
             return (
-              <div
+              <article
                 key={index}
-                className={`${bgColor} rounded-2xl p-8 text-white shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 animate-fade-in`}
+                className={`${bgColor} rounded-2xl p-8 text-white shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-2 animate-scale-in group`}
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <Icon className="h-12 w-12 mb-4" />
+                <Icon className="h-12 w-12 mb-4 group-hover:scale-110 transition-transform duration-300" />
                 <h3 className="text-2xl font-bold mb-2">{promo.title}</h3>
                 <p className="text-white/90 mb-6">{promo.description}</p>
                 <Button 
                   variant="secondary" 
-                  className={promo.color === "primary" ? "bg-secondary hover:bg-secondary/90" : "bg-primary hover:bg-primary/90"}
+                  className={`${promo.color === "primary" ? "bg-secondary hover:bg-secondary/90" : "bg-primary hover:bg-primary/90"} hover-scale`}
                 >
                   Подробнее
                 </Button>
-              </div>
+              </article>
             );
           })}
         </div>

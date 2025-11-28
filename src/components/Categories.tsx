@@ -18,23 +18,24 @@ const Categories = () => {
   return (
     <section id="catalog" className="py-16 bg-muted/30">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 text-foreground">
+        <h2 className="text-4xl font-bold text-center mb-12 text-foreground animate-fade-in">
           Популярные категории
         </h2>
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
           {categories.map((category, index) => (
-            <div
+            <article
               key={index}
-              className="group cursor-pointer animate-fade-in"
+              className="group cursor-pointer animate-fade-in hover:-translate-y-2 transition-all duration-300"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative overflow-hidden rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-300">
                 <div className="aspect-square relative">
                   <img
                     src={category.image}
-                    alt={category.name}
+                    alt={`${category.name} - купить с доставкой`}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
@@ -44,7 +45,7 @@ const Categories = () => {
                   </h3>
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

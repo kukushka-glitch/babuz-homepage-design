@@ -2,7 +2,7 @@ import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer id="contact" className="bg-foreground text-background py-12">
+    <footer id="contact" className="bg-foreground text-background py-12 animate-fade-in">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Logo & Description */}
